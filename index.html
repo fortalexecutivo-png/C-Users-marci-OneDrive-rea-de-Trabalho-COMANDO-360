@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Emyle Andrade — Sua empresa no controle total</title>
+<meta name="description" content="Dashboard com leads, financeiro e métricas em tempo real, landing pages de alta performance, IA no atendimento e sistemas sob medida para sua empresa." />
+<link rel="canonical" href="https://emyleandrade.com.br/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://emyleandrade.com.br/" />
+<meta property="og:title" content="Emyle Andrade · Sua empresa no controle total" />
+<meta property="og:description" content="Leads, financeiro e produtividade num painel só, em tempo real. A IA cuida do atendimento e a página vende por você." />
+<meta property="og:image" content="https://emyleandrade.com.br/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:alt" content="Painel de controle da empresa com leads, financeiro e IA em tempo real" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Emyle Andrade · Sua empresa no controle total" />
+<meta name="twitter:description" content="Leads, financeiro e produtividade num painel só, em tempo real. A IA cuida do atendimento e a página vende por você." />
+<meta name="twitter:image" content="https://emyleandrade.com.br/og-image.jpg" />
+<link rel="icon" type="image/png" href="/logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="video" href="/hailuo-2_3_quero_uma_animação_ela_abri_os_olhos_e_olha_para_um_lado_e_para_outro_lentamen-0.mp4" type="video/mp4" fetchpriority="high" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   EMYLE ANDRADE — ETAPA 1: HERO cinematográfico
+   ref. ApexAI / LEONIX — imagem full-bleed à direita
+   Verde-menta em degradê · orgânico
+   ============================================================ */
+:root{
+  --mint:#3ee8a8;
+  --mint-2:#8ff5cd;
+  --mint-3:#12b981;
+  --mint-deep:#0e6b4f;
+  --bg:#040c08;
+  --ink:#f2f8f4;
+  --mut:#a7bbAF;
+  --dim:#5f7568;
+  --line:rgba(255,255,255,.1);
+  --line-m:rgba(62,232,168,.35);
+  --gold:#d97757;
+  --gold-2:#efb191;
+  --gold-3:#b05636;
+  --gold-soft:rgba(217,119,87,.14);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;color:var(--ink);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;background:var(--bg);
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(100% - 2.6rem,1240px);margin-inline:auto}
+
+/* ============ NAV — "placa-mãe": pill + trilhas de circuito ============ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;padding-top:1.3rem}
+
+/* trilhas que saem da pill e correm pela tela, como traço de PCB */
+.nav-traces{position:absolute;inset:0;top:0;height:220px;z-index:-1;pointer-events:none;overflow:visible}
+.nav-traces path{stroke:rgba(62,232,168,.28);stroke-width:1.2;fill:none}
+.nav-traces circle{fill:var(--bg);stroke:rgba(62,232,168,.5);stroke-width:1.2}
+.nav-traces .pulse{fill:var(--mint);filter:drop-shadow(0 0 6px var(--mint))}
+.nav-traces .pA{stroke-dasharray:6 420;animation:trace 7s linear infinite}
+.nav-traces .pB{stroke-dasharray:6 420;animation:trace 7s linear infinite;animation-delay:-3.4s}
+@keyframes trace{to{stroke-dashoffset:-426}}
+
+.nav-pill{position:relative;display:flex;align-items:center;gap:.3rem;width:fit-content;margin-inline:auto;
+  padding:.5rem;border-radius:999px;border:1px solid var(--line-m);
+  background:rgba(8,18,13,.62);backdrop-filter:blur(16px);
+  box-shadow:0 18px 45px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.03) inset}
+
+.brand-btn{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border-radius:50%;
+  background:rgba(62,232,168,.1);border:1px solid var(--line-m)}
+.brand-btn img{height:20px;width:20px;object-fit:contain;border-radius:5px}
+
+/* logo Comando 360: canvas 2000x2000 com a wordmark na faixa central
+   (bbox medido pelo alfa: centro 50% x / 43.5% y, largura 77.3%, altura 13.2%).
+   Recorte via janela overflow:hidden + img posicionada em px pra enquadrar
+   só a wordmark. */
+.c360-logo-crop{position:relative;overflow:hidden;display:block}
+.c360-logo-crop img{position:absolute;width:auto;max-width:none}
+.brand-btn.c360-brand{width:auto;height:38px;flex:0 0 auto;border-radius:999px;padding:0 .9rem}
+.brand-btn.c360-brand .c360-logo-crop{height:24px;width:116px}
+.brand-btn.c360-brand .c360-logo-crop img{height:140px;left:-12px;top:-49px}
+
+/* links com "trilha" de conexão passando por baixo + pulso viajando */
+.nav-links{position:relative;display:flex;align-items:center;gap:1.5rem;padding:0 1.3rem;font-size:.85rem;
+  font-weight:600;color:rgba(242,248,244,.82)}
+.nav-links::before{content:"";position:absolute;left:.2rem;right:.2rem;bottom:-1px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(62,232,168,.35) 12%,rgba(62,232,168,.35) 88%,transparent)}
+.nav-links::after{content:"";position:absolute;left:.2rem;bottom:-2.5px;width:5px;height:5px;border-radius:50%;
+  background:var(--orange);box-shadow:0 0 8px var(--orange);
+  animation:signal 3.4s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes signal{0%,8%{left:.2rem;opacity:0}12%{opacity:1}88%{opacity:1}92%,100%{left:calc(100% - .7rem);opacity:0}}
+.nav-links a{position:relative;transition:color .3s}
+.nav-links a:hover{color:var(--mint-2)}
+.nav-links a::before{content:"";position:absolute;left:50%;bottom:-.62rem;translate:-50% 0;
+  width:4px;height:4px;border-radius:50%;background:rgba(62,232,168,.55)}
+
+.nav-cta{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:700;
+  padding:.62rem .95rem .62rem 1.15rem;border-radius:999px;color:#04271a;
+  background:linear-gradient(135deg,var(--mint-3),var(--mint) 55%,var(--mint-2));
+  box-shadow:0 0 24px -8px rgba(62,232,168,.8);white-space:nowrap;
+  transition:transform .3s var(--ease),box-shadow .3s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 0 38px -6px rgba(62,232,168,1)}
+.nav-cta span{width:22px;height:22px;border-radius:50%;background:rgba(4,39,26,.16);
+  display:grid;place-items:center;font-size:.75rem}
+
+@media(max-width:860px){
+  .nav-links{display:none}
+  .nav-traces{display:none}
+  .nav-pill{width:100%;margin-inline:1.3rem;justify-content:space-between}
+}
+@media(prefers-reduced-motion:reduce){.nav-links::after,.pA,.pB{animation:none;opacity:0}}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+
+/* imagem cinematográfica ocupando a direita, full-bleed */
+.hero-art{position:absolute;inset:0;z-index:0}
+.hero-art img,.hero-art video{position:absolute;right:0;top:50%;transform:translateY(-50%);height:95%;width:auto;max-width:none;
+  object-fit:cover;object-position:right center}
+/* funde a arte com o fundo da página nas bordas (sem crop feio) */
+.hero-art::before{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg, var(--bg) 0%, rgba(4,10,7,.85) 14%, transparent 72%);}
+.hero-art::after{content:"";position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(0deg, var(--bg) 0%, transparent 22%, transparent 80%, var(--bg) 100%),
+    linear-gradient(90deg, transparent 82%, var(--bg) 100%);}
+.vign{position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(ellipse 100% 90% at 28% 48%, var(--bg) 0%, transparent 68%)}
+
+.grain{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.045;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ===== conteúdo à esquerda ===== */
+.hero-in{position:relative;z-index:3;width:min(100% - 2.6rem,1240px);margin-inline:auto;
+  padding:6.5rem 0 4rem}
+.hero-in>*{max-width:640px}
+.badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--mint-2);
+  border:1px solid var(--line-m);border-radius:999px;padding:.5rem 1.05rem;
+  background:rgba(62,232,168,.07)}
+
+@font-face{font-family:'Nasalization';src:url('fonts/nasalization.woff2') format('woff2');
+  font-weight:400;font-style:normal;font-display:swap}
+
+.h1{font-family:'Nasalization','Inter',sans-serif;font-size:clamp(2rem,5vw,3.7rem);font-weight:400;line-height:1.25;
+  letter-spacing:.01em;margin:1.3rem 0 1.15rem;text-transform:uppercase}
+.h1 .grad{background:linear-gradient(120deg,var(--gold-2),var(--gold) 55%,var(--gold-3));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 30px rgba(217,119,87,.38))}
+
+.hero-sub{color:var(--mut);font-size:1.02rem;max-width:42ch;margin-bottom:2rem}
+.hero-sub b{color:var(--ink)}
+
+.cta-row{display:flex;align-items:center;gap:1.3rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.cta-main{display:inline-flex;align-items:center;gap:.7rem;font-weight:800;font-size:.95rem;
+  color:#04271a;padding:1rem 1.6rem 1rem 1.9rem;border-radius:999px;
+  background:linear-gradient(135deg,var(--mint-3),var(--mint) 55%,var(--mint-2));
+  box-shadow:0 0 40px -10px rgba(62,232,168,.85);
+  transition:transform .3s var(--ease),box-shadow .3s}
+.cta-main span{width:30px;height:30px;border-radius:50%;background:rgba(4,39,26,.15);
+  display:grid;place-items:center;font-size:.85rem}
+.cta-main:hover{transform:translateY(-3px);box-shadow:0 0 60px -6px rgba(62,232,168,1)}
+.cta-sec{display:inline-flex;align-items:center;gap:.6rem;font-weight:600;font-size:.92rem;color:var(--mut)}
+.cta-sec i{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);
+  display:grid;place-items:center;font-style:normal;background:rgba(255,255,255,.04)}
+.cta-sec:hover{color:var(--mint-2)}
+
+.scroll-hint{position:absolute;left:2.6rem;bottom:2.4rem;z-index:3;display:flex;align-items:center;
+  gap:.6rem;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.scroll-hint svg{animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+
+/* faixa inferior estilo LEONIX: player + steps + social */
+.hero-bar{position:absolute;left:0;right:0;bottom:0;z-index:3;
+  border-top:1px solid var(--line-m);background:rgba(4,10,7,.9);backdrop-filter:blur(18px) saturate(1.3);
+  box-shadow:0 -18px 40px -20px rgba(0,0,0,.9),0 -1px 0 rgba(62,232,168,.12) inset}
+.hb-in{display:flex;align-items:center;gap:1.6rem;padding:1.1rem 2.6rem}
+.hb-live{display:flex;align-items:center;gap:.55rem;font-size:.78rem;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--ink);white-space:nowrap}
+.hb-live i{width:9px;height:9px;border-radius:50%;background:var(--mint);flex:0 0 9px;
+  box-shadow:0 0 10px 1px rgba(62,232,168,.9);animation:live-pulse 1.8s ease-in-out infinite}
+@keyframes live-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.7)}}
+@media(prefers-reduced-motion:reduce){.hb-live i{animation:none}}
+.hb-metrics{display:flex;align-items:center;gap:.8rem;flex:1;overflow:hidden}
+.hb-chip{display:flex;align-items:center;gap:.65rem;padding:.45rem .8rem;border-radius:12px;
+  background:rgba(255,255,255,.035);border:1px solid var(--line);white-space:nowrap;
+  transition:border-color .3s,background .3s}
+.hb-chip:hover{border-color:var(--line-m);background:rgba(62,232,168,.05)}
+.hb-chip .lbl{display:flex;flex-direction:column;line-height:1.15}
+.hb-chip .lbl b{font-size:.6rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--dim)}
+.hb-chip .lbl em{font-style:normal;font-size:.98rem;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+.hb-chip .spark{width:38px;height:16px;flex:0 0 38px;overflow:visible}
+.hb-chip .trend{font-size:.66rem;font-weight:700;color:var(--mint-2)}
+.hb-chip .trend.gold{color:var(--gold-2)}
+.hb-arrow{margin-left:auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--line-m);color:var(--mint-2);
+  display:grid;place-items:center;flex:0 0 36px;transition:background .3s,border-color .3s}
+.hb-arrow:hover{background:rgba(62,232,168,.15)}
+.hb-social{display:flex;gap:.7rem}
+.hb-social a{width:36px;height:36px;border-radius:50%;background:rgba(62,232,168,.1);border:1px solid var(--line-m);
+  display:grid;place-items:center;transition:background .3s,border-color .3s}
+.hb-social a:hover{background:rgba(62,232,168,.25);border-color:var(--mint)}
+.hb-social svg{width:15px;height:15px}
+
+@media(max-width:900px){
+  .hero-art img,.hero-art video{width:100%;height:70%;top:auto;bottom:0;transform:none;object-position:center 20%}
+  .hero-art::before{background:linear-gradient(180deg, var(--bg) 0%, transparent 100%)}
+  .hero-art::after{background:linear-gradient(0deg, var(--bg) 0%, transparent 22%)}
+  .vign{background:radial-gradient(ellipse 100% 60% at 50% 0%, var(--bg) 0%, transparent 60%)}
+  .hero-in{padding-top:6.2rem;max-width:none;text-align:left}
+  .h1{font-size:clamp(2rem,8vw,2.8rem)}
+  .hb-in{flex-wrap:wrap;padding:1rem 1.4rem}
+  .hb-metrics{display:none}
+  .scroll-hint{display:none}
+}
+@media(prefers-reduced-motion:reduce){.scroll-hint svg{animation:none}}
+
+/* ============================================================
+   SISTEMAS — 2ª dobra: convergência (ref. Modular Flow)
+   DUOTONE NEON: ciano elétrico (esquerda) + âmbar (direita) + hub verde
+   ============================================================ */
+:root{--cyan:#2dd9f5;--cyan-soft:rgba(45,217,245,.16);--orange:#d97757;--orange-soft:rgba(217,119,87,.16)}
+
+.sistemas{padding:7rem 0 8rem;position:relative;overflow:hidden}
+/* halo atmosférico — a luz "vaza" pro fundo escuro, não é fundo pintado */
+.sistemas::before,.sistemas::after{content:"";position:absolute;top:12%;width:44vw;height:44vw;
+  border-radius:50%;filter:blur(90px);z-index:0;pointer-events:none}
+.sistemas::before{left:-14%;background:radial-gradient(circle,rgba(45,217,245,.16),transparent 70%)}
+.sistemas::after{right:-14%;background:radial-gradient(circle,rgba(217,119,87,.15),transparent 70%)}
+
+.sec-head{position:relative;z-index:2;max-width:640px;margin-bottom:3.4rem}
+.sec-head h2{font-size:clamp(1.9rem,4.2vw,2.9rem);font-weight:800;letter-spacing:-.02em;margin:.8rem 0 1rem}
+.sec-head h2 .grad{background:linear-gradient(120deg,var(--gold-3),var(--gold) 55%,var(--gold-2));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sec-head p{color:var(--mut);font-size:.98rem}
+
+.converge{position:relative;z-index:2;display:grid;grid-template-columns:1fr 270px 1fr;gap:2.2rem;align-items:center}
+.conv-lines{position:absolute;inset:0;width:100%;height:100%;z-index:0;overflow:visible}
+/* trilha de circuito — curva suave tipo placa-mãe, mesmo estilo do nav-traces */
+.conv-lines .wire{fill:none;stroke-width:.16;stroke-linejoin:round;stroke-linecap:round;opacity:.65}
+.conv-lines .wire.cy{stroke:var(--cyan);filter:drop-shadow(0 0 1.5px var(--cyan))}
+.conv-lines .wire.or{stroke:var(--orange);filter:drop-shadow(0 0 1.5px var(--orange))}
+/* faísca viajando ao longo da trilha */
+.conv-lines .pulse{fill:none;stroke-width:.32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.6 34}
+.conv-lines .pulse.cy{stroke:#eafcff;filter:drop-shadow(0 0 2px var(--cyan))}
+.conv-lines .pulse.or{stroke:#fff0dd;filter:drop-shadow(0 0 2px var(--orange))}
+.conv-lines .pulse.r1{animation:flow 4.2s linear infinite}
+.conv-lines .pulse.r2{animation:flow 4.2s linear infinite;animation-delay:-2.1s}
+@keyframes flow{to{stroke-dashoffset:-72}}
+.conv-lines circle{r:.9}
+.conv-lines .ccy{fill:var(--cyan);filter:drop-shadow(0 0 4px var(--cyan))}
+.conv-lines .cor{fill:var(--orange);filter:drop-shadow(0 0 4px var(--orange))}
+
+.conv-col{position:relative;z-index:2;display:flex;flex-direction:column;gap:1.3rem}
+/* ===== vidro fosco realista (glassmorphism, ref. Content Flow) ===== */
+.conv-card{position:relative;overflow:hidden;padding:1.5rem 1.6rem;border-radius:18px;
+  background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.02) 45%,rgba(6,12,14,.1));
+  backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), inset 0 0 22px rgba(255,255,255,.03), 0 20px 40px -22px rgba(0,0,0,.8);
+  transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
+/* aresta luminosa superior (borda de vidro brilhando só no topo) */
+.conv-card::after{content:"";position:absolute;inset:0;border-radius:18px;padding:1px;pointer-events:none;
+  background:linear-gradient(160deg,rgba(255,255,255,.5),rgba(255,255,255,.05) 30%,transparent 55%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;opacity:.6}
+/* reflexo de luz diagonal varrendo o vidro */
+.conv-card::before{content:"";position:absolute;top:-40%;left:-30%;width:70%;height:150%;pointer-events:none;
+  background:linear-gradient(115deg,rgba(255,255,255,.16),transparent 60%);transform:rotate(8deg)}
+.conv-card:hover{transform:translateY(-4px)}
+.conv-card.cy{border-color:rgba(45,217,245,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 0 26px -16px var(--cyan), 0 20px 40px -22px rgba(0,0,0,.8)}
+.conv-card.cy:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.2), 0 0 46px -10px rgba(45,217,245,.7), 0 20px 40px -20px rgba(0,0,0,.8);border-color:rgba(45,217,245,.7)}
+.conv-card.or{border-color:rgba(217,119,87,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 0 26px -16px var(--orange), 0 20px 40px -22px rgba(0,0,0,.8)}
+.conv-card.or:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.2), 0 0 46px -10px rgba(217,119,87,.7), 0 20px 40px -20px rgba(0,0,0,.8);border-color:rgba(217,119,87,.7)}
+.conv-card>*{position:relative;z-index:1}
+.cic{display:grid;place-items:center;width:40px;height:40px;border-radius:11px;margin-bottom:.85rem}
+.cic svg{width:20px;height:20px;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.conv-card.cy .cic{background:var(--cyan-soft);box-shadow:0 0 16px -4px var(--cyan) inset,0 0 12px -4px var(--cyan)}
+.conv-card.cy .cic svg{stroke:var(--cyan)}
+.conv-card.or .cic{background:var(--orange-soft);box-shadow:0 0 16px -4px var(--orange) inset,0 0 12px -4px var(--orange)}
+.conv-card.or .cic svg{stroke:var(--orange)}
+.conv-card h3{font-size:.96rem;font-weight:700;margin-bottom:.35rem}
+.conv-card p{font-size:.8rem;color:var(--mut);line-height:1.45}
+
+.conv-center{position:relative;z-index:2;display:grid;place-items:center}
+.hub-glow{position:absolute;width:280px;height:110px;bottom:-38px;left:50%;translate:-50% 0;
+  background:radial-gradient(ellipse,rgba(62,232,168,.5),transparent 72%);filter:blur(24px)}
+.hub-rings{position:absolute;bottom:-50px;left:50%;translate:-50% 0;width:280px;height:76px;
+  border-radius:50%;border:1px solid rgba(62,232,168,.22)}
+.hub-rings::before,.hub-rings::after{content:"";position:absolute;inset:14px;border-radius:50%;
+  border:1px solid rgba(62,232,168,.16)}
+.hub-rings::after{inset:28px;border-color:rgba(62,232,168,.1)}
+.hub-card{position:relative;text-align:center;padding:2.2rem 1.7rem;border-radius:24px;
+  background:linear-gradient(160deg,rgba(62,232,168,.2),rgba(6,20,13,.7));
+  border:1px solid var(--line-m);
+  box-shadow:0 34px 70px -22px rgba(0,0,0,.85),0 0 65px -12px rgba(62,232,168,.7)}
+.hub-badge{position:relative;width:68px;height:68px;margin:0 auto 1.1rem;display:grid;place-items:center}
+.hub-hex{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 0 14px rgba(62,232,168,.55))}
+.hub-ia{position:relative;z-index:1;font-family:'Inter';font-weight:900;font-size:1.15rem;
+  letter-spacing:.05em;color:var(--ink);text-shadow:0 0 14px rgba(62,232,168,.85)}
+.hub-card h3{font-size:1.2rem;font-weight:800;margin-bottom:.55rem}
+.hub-card p{font-size:.86rem;color:var(--mut)}
+
+@media(max-width:900px){
+  .converge{grid-template-columns:1fr;gap:1.4rem}
+  .conv-lines{display:none}
+  .conv-center{order:-1;margin-bottom:.6rem}
+  .hub-glow,.hub-rings{display:none}
+}
+
+/* ============================================================
+   RESULTADOS — 3ª dobra: bento de widgets de dashboard
+   (ref. Audience Patterns) · glassmorphism + neon
+   ============================================================ */
+.result{padding:6rem 0 7rem;position:relative;overflow:hidden}
+.result::before{content:"";position:absolute;top:20%;right:-10%;width:40vw;height:40vw;border-radius:50%;
+  background:radial-gradient(circle,rgba(62,232,168,.13),transparent 70%);filter:blur(90px);z-index:0}
+.result .wrap{position:relative;z-index:2}
+.res-tag{display:inline-flex;align-items:center;gap:.45rem;font-size:.66rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--mint-2);border:1px solid var(--line-m);
+  border-radius:999px;padding:.34rem .8rem;background:rgba(62,232,168,.06);margin-top:1rem}
+
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:2.8rem;
+  grid-auto-rows:minmax(150px,auto)}
+.w{position:relative;overflow:hidden;border-radius:16px;padding:1.3rem 1.4rem;
+  background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.015) 40%,rgba(6,12,14,.06));
+  backdrop-filter:blur(11px) saturate(1.5);-webkit-backdrop-filter:blur(11px) saturate(1.5);
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 20px 40px -24px rgba(0,0,0,.75);
+  transition:transform .3s var(--ease),box-shadow .3s;
+  font-variant-numeric:tabular-nums}
+.w::before{content:"";position:absolute;top:-40%;left:-30%;width:70%;height:150%;pointer-events:none;
+  background:linear-gradient(115deg,rgba(255,255,255,.11),transparent 60%);transform:rotate(8deg)}
+.w>*{position:relative;z-index:1}
+.w:hover{transform:translateY(-4px)}
+/* cabeçalho estilo "chrome" de app real: label + divisória + slot de status/período */
+.w .wlabel{font-size:.66rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mut);
+  margin-bottom:.9rem;padding-bottom:.7rem;border-bottom:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:space-between;gap:.5rem .4rem;flex-wrap:wrap;row-gap:.5rem}
+.w .wlabel>span:last-child{flex-wrap:wrap}
+.w .ex{font-size:.56rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:.14rem .5rem;
+  background:rgba(255,255,255,.03)}
+/* chip de status tipo "Normal" (bolinha + palavra), como em dashboard real */
+.stat-pill{display:inline-flex;align-items:center;gap:.35rem;font-size:.62rem;font-weight:700;
+  letter-spacing:.03em;text-transform:uppercase;padding:.26rem .6rem;border-radius:999px;white-space:nowrap}
+.stat-pill i{width:6px;height:6px;border-radius:50%;flex:0 0 6px}
+.stat-pill.ok{color:#7cf5b8;background:rgba(62,232,168,.12)}
+.stat-pill.ok i{background:#3ee8a8;box-shadow:0 0 6px #3ee8a8}
+.stat-pill.info{color:#a6ecfb;background:rgba(45,217,245,.12)}
+.stat-pill.info i{background:#2dd9f5;box-shadow:0 0 6px #2dd9f5}
+/* tamanhos bento */
+.w-2{grid-column:span 2}
+.w-2r{grid-row:span 2}
+@media(max-width:820px){.bento{grid-template-columns:repeat(2,1fr)}.w-2{grid-column:span 2}.w-2r{grid-row:auto}}
+@media(max-width:520px){.bento{grid-template-columns:1fr}.w-2{grid-column:auto}}
+
+/* --- widget: número grande --- */
+.w-num .big{font-family:'Inter';font-weight:800;font-size:2.3rem;line-height:1;margin:.3rem 0 .3rem;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.w-num.cy .big{color:var(--cyan);text-shadow:0 0 22px rgba(45,217,245,.5)}
+.w-num.or .big{color:var(--orange);text-shadow:0 0 22px rgba(217,119,87,.5)}
+.w-num.gr .big{color:var(--mint);text-shadow:0 0 22px rgba(62,232,168,.5)}
+.w-num small{font-size:.78rem;color:var(--mut)}
+.w-num .trend{font-size:.7rem;font-weight:700;color:var(--mint-2);margin-top:.5rem;display:inline-flex;align-items:center;gap:.3rem}
+
+/* --- widget: anel de progresso --- */
+.ring-wrap{display:flex;align-items:center;gap:1.1rem;margin-top:.7rem}
+.ring{position:relative;width:82px;height:82px;flex:0 0 82px}
+.ring svg{transform:rotate(-90deg)}
+.ring .track{stroke:rgba(255,255,255,.08)}
+.ring .val{stroke-linecap:round;stroke-dasharray:220;stroke-dashoffset:66;filter:drop-shadow(0 0 4px currentColor)}
+.ring .pct{position:absolute;inset:0;display:grid;place-items:center;font-weight:900;font-size:1.05rem}
+.ring-wrap .rt{font-size:.82rem;color:var(--mut);line-height:1.4}
+.ring-wrap .rt b{color:var(--ink);display:block;font-size:.95rem;margin-bottom:.15rem}
+
+/* --- widget: gráfico de área (financeiro) --- */
+.chart{margin-top:.8rem}
+.chart svg{width:100%;height:auto;display:block}
+.chart .area{fill:url(#areaFill)}
+.chart .lineP{fill:none;stroke:var(--orange);stroke-width:2.2;stroke-linecap:round;filter:drop-shadow(0 0 5px rgba(217,119,87,.6))}
+.chart .dot{fill:var(--orange);filter:drop-shadow(0 0 4px var(--orange))}
+.w-big-num{font-family:'Inter';font-weight:900;font-size:1.7rem;color:var(--orange);text-shadow:0 0 18px rgba(217,119,87,.45)}
+
+/* --- widget: donut (leads por origem) --- */
+.donut-wrap{display:flex;align-items:center;gap:1.2rem;margin-top:.6rem}
+.donut{position:relative;width:96px;height:96px;flex:0 0 96px}
+.donut svg{transform:rotate(-90deg)}
+.donut .center{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.donut .center b{font-size:1.15rem;font-weight:900;color:var(--cyan)}
+.donut .center span{font-size:.56rem;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+.legend{display:flex;flex-direction:column;gap:.5rem;font-size:.78rem}
+.legend div{display:flex;align-items:center;gap:.5rem;color:var(--mut)}
+.legend i{width:9px;height:9px;border-radius:3px;flex:0 0 9px}
+.legend b{color:var(--ink);margin-left:auto;font-weight:700}
+
+/* --- widget: mini-funil --- */
+.funnel{margin-top:.8rem;display:flex;flex-direction:column;gap:.4rem}
+.frow{display:flex;align-items:center;gap:.7rem;font-size:.76rem}
+.fbar{height:22px;border-radius:6px;display:flex;align-items:center;padding-left:.6rem;font-weight:700;font-size:.7rem;color:#04271a}
+.frow span{color:var(--mut);white-space:nowrap}
+.frow b{margin-left:auto;color:var(--ink);font-weight:700}
+
+/* ============================================================
+   DEEP ZONE — textura sutil de grid/rede (Dores → Sistemas → Resultados)
+   fundo delicado e estático, nunca aparece na Hero
+   ============================================================ */
+.deep-zone{position:relative;isolation:isolate;
+  /* funde a emenda hero-bar → deep-zone: pinta o topo com o MESMO tom da base
+     da barra e desvanece pro fundo da página, eliminando o degrau reto de cor */
+  background:linear-gradient(to bottom,rgba(4,10,7,.9) 0,rgba(4,10,7,0) 72px)}
+/* ============================================================
+   TEXTURA DE FUNDO (inspirada na Figura 01) — traços de circuito
+   descendo + nós com glow teal/dourado + bokeh suave. Presença
+   sutil atrás de texto/cards; aplicada em .page-fx (tudo menos o hero).
+   ============================================================ */
+.page-fx{position:relative;z-index:0}
+.page-fx>*{position:relative;z-index:1}
+.page-fx::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  /* traços de circuito suaves (linhas finas + anéis pequenos) + bokeh discreto */
+  background-image:
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22340%22%20height%3D%22340%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%233ee8a8%22%20stroke-width%3D%221%22%3E%3Cpath%20d%3D%22M52%200%20V88%20H118%20V170%22%20opacity%3D%22.13%22%2F%3E%3Cpath%20d%3D%22M215%200%20V50%20H170%20V124%22%20opacity%3D%22.11%22%2F%3E%3Cpath%20d%3D%22M283%200%20V190%22%20opacity%3D%22.10%22%2F%3E%3Cpath%20d%3D%22M20%20238%20H104%20V340%22%20opacity%3D%22.11%22%2F%3E%3Cpath%20d%3D%22M340%20108%20H242%20V272%22%20opacity%3D%22.095%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%221.2%22%3E%3Ccircle%20cx%3D%22118%22%20cy%3D%22170%22%20r%3D%224.5%22%20stroke%3D%22%233ee8a8%22%20opacity%3D%22.4%22%2F%3E%3Ccircle%20cx%3D%22170%22%20cy%3D%22124%22%20r%3D%224.5%22%20stroke%3D%22%23d97757%22%20opacity%3D%22.34%22%2F%3E%3Ccircle%20cx%3D%22283%22%20cy%3D%22190%22%20r%3D%224.5%22%20stroke%3D%22%233ee8a8%22%20opacity%3D%22.34%22%2F%3E%3Ccircle%20cx%3D%22104%22%20cy%3D%22238%22%20r%3D%223.5%22%20stroke%3D%22%233ee8a8%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22242%22%20cy%3D%22272%22%20r%3D%224%22%20stroke%3D%22%23d97757%22%20opacity%3D%22.28%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
+    radial-gradient(circle 150px at 13% 5%,rgba(62,232,168,.045),transparent 70%),
+    radial-gradient(circle 120px at 88% 38%,rgba(217,119,87,.03),transparent 70%),
+    radial-gradient(circle 160px at 32% 76%,rgba(62,232,168,.035),transparent 72%);
+  background-repeat:repeat,no-repeat,no-repeat,no-repeat;
+  background-size:340px 340px,auto,auto,auto;
+  opacity:.8;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 48px);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 48px);
+}
+@media(max-width:680px){.page-fx::before{background-size:230px 230px,auto,auto,auto}}
+
+.deep-zone::before{
+  content:"";display:none;position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(45,217,245,.1) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(45,217,245,.1) 1px,transparent 1px),
+    radial-gradient(circle at 18% 6%,rgba(62,232,168,1) 0,rgba(62,232,168,.55) 2.5px,transparent 7px),
+    radial-gradient(circle at 78% 11%,rgba(45,217,245,.95) 0,rgba(45,217,245,.5) 2.5px,transparent 7px),
+    radial-gradient(circle at 32% 33%,rgba(45,217,245,.9) 0,rgba(45,217,245,.45) 2.5px,transparent 7px),
+    radial-gradient(circle at 90% 42%,rgba(62,232,168,.95) 0,rgba(62,232,168,.5) 2.5px,transparent 7px),
+    radial-gradient(circle at 10% 58%,rgba(45,217,245,.9) 0,rgba(45,217,245,.45) 2.5px,transparent 7px),
+    radial-gradient(circle at 62% 68%,rgba(62,232,168,.95) 0,rgba(62,232,168,.5) 2.5px,transparent 7px),
+    radial-gradient(circle at 85% 86%,rgba(45,217,245,.9) 0,rgba(45,217,245,.45) 2.5px,transparent 7px),
+    radial-gradient(circle at 22% 92%,rgba(62,232,168,.95) 0,rgba(62,232,168,.5) 2.5px,transparent 7px),
+    radial-gradient(circle at 48% 18%,rgba(45,217,245,.9) 0,rgba(45,217,245,.45) 2.5px,transparent 7px),
+    radial-gradient(circle at 6% 30%,rgba(62,232,168,.9) 0,rgba(62,232,168,.45) 2.5px,transparent 7px),
+    radial-gradient(circle at 70% 52%,rgba(45,217,245,.9) 0,rgba(45,217,245,.45) 2.5px,transparent 7px),
+    radial-gradient(circle at 40% 78%,rgba(62,232,168,.9) 0,rgba(62,232,168,.45) 2.5px,transparent 7px),
+    radial-gradient(circle at 94% 66%,rgba(45,217,245,.9) 0,rgba(45,217,245,.45) 2.5px,transparent 7px);
+  background-size:58px 58px,58px 58px,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%;
+  background-repeat:repeat,repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 4%,#000 96%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 4%,#000 96%,transparent 100%);
+}
+@media(max-width:680px){
+  .deep-zone::before{background-size:38px 38px,38px 38px,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%}
+}
+
+/* ============================================================
+   DORES — cards de glow vívido (luz saturada vazando da base)
+   estrutura em linha única de 4, distinta do hub-convergência do Sistemas
+   e do bento assimétrico do Resultados
+   ============================================================ */
+
+/* transição Hero → Dores: feixe de luz largo vazando da base da hero
+   + linha fina de scan por cima, como faísca dentro do brilho */
+.scan-line{position:relative;height:0;overflow:visible;z-index:0}
+.scan-line::after{content:"";position:absolute;left:50%;top:-210px;translate:-50% 0;
+  width:min(94%,1220px);height:440px;pointer-events:none;z-index:0;
+  background:radial-gradient(62% 100% at 50% 44%,rgba(62,232,168,.5),transparent 72%);
+  filter:blur(38px)}
+.scan-line::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;z-index:1;
+  background:linear-gradient(90deg,transparent,var(--mint) 15%,var(--mint-2) 50%,var(--mint) 85%,transparent);
+  box-shadow:0 0 14px 1px rgba(62,232,168,.55);transform-origin:center;opacity:.4;
+  animation:scan-reveal 1s linear forwards;animation-timeline:--dores-in;animation-range:entry 0% entry 35%}
+@keyframes scan-reveal{0%{opacity:0;transform:scaleX(.15)}55%{opacity:1;transform:scaleX(1)}100%{opacity:.5;transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.scan-line::before{animation:none;opacity:.5;transform:none}}
+
+.dores{padding:6.5rem 0 3rem;view-timeline-name:--dores-in;view-timeline-axis:block}
+.dor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;margin-top:2.8rem}
+.dor-card{
+  position:relative;overflow:hidden;border-radius:22px;
+  padding:1.7rem 1.5rem 2.1rem;min-height:290px;
+  display:flex;flex-direction:column;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,0) 42%),
+    #0a0e0c;
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 24px 48px -28px rgba(0,0,0,.6),
+    inset 0 1px 0 rgba(255,255,255,.1);
+  transition:transform .4s var(--ease),border-color .4s var(--ease)
+}
+.dor-card:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--glow) 45%,rgba(255,255,255,.1))}
+.dor-card::after{content:"";position:absolute;left:8%;right:8%;bottom:0;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--glow),transparent);opacity:.85;pointer-events:none}
+.dc-n{position:absolute;top:1.5rem;right:1.6rem;font-weight:800;font-size:.78rem;letter-spacing:.05em;
+  color:rgba(255,255,255,.32)}
+.dc-icon{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.5rem;background:linear-gradient(150deg,var(--glow),var(--glow-2));
+  box-shadow:0 12px 28px -6px color-mix(in srgb,var(--glow) 75%,transparent),inset 0 1px 0 rgba(255,255,255,.4)}
+.dc-icon svg{width:21px;height:21px}
+.dor-card h3{font-size:1.1rem;font-weight:700;margin-bottom:.55rem;line-height:1.25}
+.dor-card p{font-size:.84rem;color:var(--mut);line-height:1.55}
+@media(max-width:980px){.dor-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.dor-grid{grid-template-columns:1fr;gap:1.1rem}.dor-card{min-height:0}}
+.dor-cta{margin-top:2.6rem;text-align:center}
+
+/* ============================================================
+   COMO FUNCIONA — timeline vertical com nós conectados
+   (composição linear, distinta dos grids/rail/hub das outras)
+   ============================================================ */
+.processo{padding:6.5rem 0 5rem;position:relative}
+.proc-wrap{margin-top:3rem;position:relative;max-width:780px}
+.proc-line{position:absolute;left:23px;top:24px;bottom:36px;width:2px;
+  background:linear-gradient(180deg,var(--mint),var(--mint-3) 50%,transparent);opacity:.7}
+.proc-step{position:relative;display:grid;grid-template-columns:48px 1fr;gap:1.5rem;padding:1.3rem 0;align-items:start}
+.proc-node{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;position:relative;z-index:1;
+  background:linear-gradient(150deg,rgba(217,119,87,.22),rgba(224,154,18,.05));
+  border:1px solid rgba(217,119,87,.4);font-weight:800;color:var(--gold-2);font-size:1.05rem;
+  backdrop-filter:blur(4px);transition:border-color .3s,box-shadow .3s}
+.proc-step:hover .proc-node{border-color:var(--gold);box-shadow:0 0 22px -4px rgba(217,119,87,.6)}
+.proc-body h3{font-size:1.15rem;font-weight:700;margin-bottom:.45rem}
+.proc-body p{color:var(--mut);font-size:.92rem;line-height:1.6;max-width:56ch}
+.proc-body .free{display:inline-block;margin-top:.6rem;font-size:.68rem;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--gold-2);background:var(--gold-soft);padding:.28rem .65rem;border-radius:999px}
+@media(max-width:560px){.proc-step{grid-template-columns:40px 1fr;gap:1.1rem}.proc-node{width:40px;height:40px;font-size:.95rem}.proc-line{left:19px}}
+
+/* ============================================================
+   PROJETOS — rail horizontal com scroll-snap (interação distinta
+   dos grids verticais das outras seções)
+   ============================================================ */
+.projetos{padding:7rem 0 6rem;position:relative;overflow:hidden}
+.proj-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.proj-hint{font-size:.78rem;color:var(--dim);display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap}
+.proj-hint svg{width:16px;height:16px}
+.proj-rail{display:flex;gap:1.4rem;margin-top:3rem;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:.5rem .3rem 1.6rem;scrollbar-width:thin;scrollbar-color:var(--line-m) transparent}
+.proj-rail::-webkit-scrollbar{height:6px}
+.proj-rail::-webkit-scrollbar-track{background:transparent}
+.proj-rail::-webkit-scrollbar-thumb{background:var(--line-m);border-radius:3px}
+.proj-card{flex:0 0 auto;width:min(84vw,410px);scroll-snap-align:start;border-radius:20px;overflow:hidden;
+  border:1px solid var(--line);background:rgba(255,255,255,.02);
+  transition:transform .4s var(--ease),border-color .4s var(--ease)}
+.proj-card:hover{transform:translateY(-6px);border-color:var(--line-m)}
+.proj-thumb{position:relative;aspect-ratio:3/2;overflow:hidden;background:#0a0e0c}
+.proj-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;
+  transition:transform .6s var(--ease)}
+.proj-card:hover .proj-thumb img{transform:scale(1.05)}
+.proj-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(4,13,9,.55));pointer-events:none}
+.proj-meta{padding:1.2rem 1.3rem 1.4rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.proj-meta h3{font-size:1.05rem;font-weight:700}
+.proj-tag{font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mint-2);
+  background:var(--mint-soft);padding:.32rem .7rem;border-radius:999px;white-space:nowrap}
+.proj-live{display:inline-flex;align-items:center;gap:.4rem;position:absolute;top:.9rem;right:.9rem;z-index:2;
+  font-size:.66rem;font-weight:700;color:var(--ink);background:rgba(4,13,9,.6);backdrop-filter:blur(6px);
+  border:1px solid var(--line-m);padding:.34rem .7rem;border-radius:999px}
+.proj-live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mint);box-shadow:0 0 8px var(--mint)}
+
+/* ============================================================
+   QUEM FAZ — foto real emoldurada à esquerda + posicionamento
+   (composição contida, oposta ao hero full-bleed image-right)
+   ============================================================ */
+.sobre{padding:5rem 0 7rem;position:relative;overflow:hidden}
+.sobre::before{content:"";position:absolute;left:-10%;top:20%;width:40vw;height:40vw;border-radius:50%;
+  background:radial-gradient(circle,rgba(62,232,168,.12),transparent 70%);filter:blur(90px);z-index:0;pointer-events:none}
+.sobre-grid{position:relative;z-index:1;display:grid;grid-template-columns:.82fr 1fr;gap:3.6rem;align-items:center}
+.sobre-photo{position:relative;border-radius:24px;overflow:hidden;border:1px solid var(--line-m);aspect-ratio:4/5;
+  box-shadow:0 40px 90px -32px rgba(62,232,168,.45),inset 0 1px 0 rgba(255,255,255,.1)}
+.sobre-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 30%}
+.sobre-badge{position:absolute;left:1rem;bottom:1rem;z-index:2;display:flex;align-items:center;gap:.6rem;
+  background:rgba(4,13,9,.72);backdrop-filter:blur(10px);border:1px solid var(--line-m);
+  padding:.6rem .9rem;border-radius:14px}
+.sobre-badge .dot{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 10px var(--mint)}
+.sobre-badge span{font-size:.78rem;font-weight:600;color:var(--ink)}
+.sobre-txt h2{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.12;margin:.9rem 0 1.4rem}
+.sobre-txt h2 .grad{background:linear-gradient(120deg,var(--gold-3),var(--gold) 55%,var(--gold-2));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sobre-txt p{color:var(--mut);font-size:1rem;line-height:1.65;margin-bottom:1.1rem;max-width:54ch}
+.sobre-txt p b{color:var(--ink);font-weight:700}
+.sobre-cta{margin-top:1.9rem;display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center}
+@media(max-width:820px){
+  .sobre-grid{grid-template-columns:1fr;gap:2.4rem}
+  .sobre-photo{max-width:380px;margin:0 auto}
+}
+
+/* ============================================================
+   CTA FINAL — bloco de fechamento centralizado com glow
+   (composição centrada, distinta de todas as outras seções)
+   ============================================================ */
+.cta-final{position:relative;padding:5.5rem 0 6.5rem;overflow:hidden;text-align:center}
+.cta-final::before{content:"";position:absolute;left:50%;top:42%;translate:-50% -50%;width:70vw;height:70vw;
+  max-width:880px;max-height:880px;border-radius:50%;background:radial-gradient(circle,rgba(62,232,168,.16),transparent 65%);
+  filter:blur(80px);z-index:0;pointer-events:none}
+.cta-visual{position:relative;z-index:1;max-width:1040px;margin:0 auto -2.6rem;border-radius:24px;overflow:hidden;
+  border:1px solid var(--line-m);box-shadow:0 44px 100px -36px rgba(62,232,168,.55),inset 0 1px 0 rgba(255,255,255,.12)}
+.cta-visual img{width:100%;height:auto;display:block}
+.cta-visual::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,transparent 62%,rgba(4,12,8,.85))}
+.cta-box{position:relative;z-index:2;max-width:720px;margin:0 auto;border:1px solid var(--line-m);border-radius:28px;
+  padding:3.4rem 2.5rem;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.008));
+  backdrop-filter:blur(10px);box-shadow:0 40px 90px -42px rgba(62,232,168,.45),inset 0 1px 0 rgba(255,255,255,.1)}
+.cta-box h2{font-size:clamp(1.9rem,4.5vw,3rem);font-weight:800;letter-spacing:-.02em;line-height:1.12;margin:.9rem 0 1rem}
+.cta-box h2 .grad{background:linear-gradient(120deg,var(--gold-3),var(--gold) 55%,var(--gold-2));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cta-box p{color:var(--mut);font-size:1.02rem;line-height:1.6;max-width:50ch;margin:0 auto 2rem}
+.cta-box p b{color:var(--ink)}
+.cta-box .cta-row{display:flex;justify-content:center;flex-wrap:wrap;gap:1rem}
+.cta-final-note{margin-top:1.5rem;font-size:.82rem;color:var(--dim)}
+@media(max-width:560px){.cta-box{padding:2.6rem 1.5rem}}
+
+/* ============================================================
+   FOOTER — institucional, sem assinatura de terceiros (site próprio)
+   ============================================================ */
+.footer{border-top:1px solid var(--line);padding:3.6rem 0 2.4rem;position:relative}
+.foot-grid{display:flex;justify-content:space-between;gap:2.5rem;flex-wrap:wrap;align-items:flex-start}
+.foot-brand{max-width:320px}
+.foot-brand .c360-logo-crop{height:38px;width:186px;margin-bottom:.4rem}
+.foot-brand .c360-logo-crop img{height:224px;left:-19px;top:-78px}
+.foot-brand p{color:var(--mut);font-size:.88rem;line-height:1.6;margin-top:1rem}
+.foot-nav{display:flex;gap:3rem;flex-wrap:wrap}
+.foot-col h4{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);margin-bottom:1rem}
+.foot-col a{display:block;color:var(--mut);font-size:.9rem;margin-bottom:.6rem;transition:color .3s}
+.foot-col a:hover{color:var(--mint-2)}
+.foot-addr{display:block;color:var(--mut);font-size:.9rem;line-height:1.5;margin-bottom:.6rem}
+.foot-bottom{margin-top:3rem;padding-top:1.6rem;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;align-items:center;font-size:.8rem;color:var(--dim)}
+.foot-social{display:flex;gap:.7rem}
+.foot-social a{width:38px;height:38px;border-radius:11px;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;transition:border-color .3s,background .3s}
+.foot-social a:hover{border-color:var(--mint);background:var(--mint-soft)}
+.foot-social svg{width:16px;height:16px;fill:var(--mut)}
+.foot-social a:hover svg{fill:var(--mint-2)}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ NAV — placa-mãe ============ -->
+<header class="nav">
+  <svg class="nav-traces" viewBox="0 0 1240 220" preserveAspectRatio="none" aria-hidden="true">
+    <path class="pA" d="M270 40 C 160 40, 130 40, 90 90 S 40 170, -10 170"/>
+    <path class="pB" d="M970 40 C 1080 40, 1110 40, 1150 90 S 1200 170, 1250 170"/>
+    <circle cx="270" cy="40" r="3"/><circle cx="90" cy="90" r="3"/><circle cx="-6" cy="168" r="3"/>
+    <circle cx="970" cy="40" r="3"/><circle cx="1150" cy="90" r="3"/><circle cx="1246" cy="168" r="3"/>
+  </svg>
+  <div class="wrap">
+    <div class="nav-pill">
+      <a class="brand-btn c360-brand" href="#top" aria-label="Comando 360"><span class="c360-logo-crop"><img src="logo-comando360.png" alt=""></span></a>
+      <nav class="nav-links">
+        <a href="#servicos">Sistemas</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#quemfaz">Quem faz</a>
+      </nav>
+      <a class="nav-cta" href="https://wa.me/5585992328407?text=Oi%20Emyle!%20Quero%20organizar%20minha%20empresa%20com%20dados">Falar <span>↗</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-art" aria-hidden="true">
+    <video src="hailuo-2_3_quero_uma_animação_ela_abri_os_olhos_e_olha_para_um_lado_e_para_outro_lentamen-0.mp4"
+      poster="hero-ia.png" autoplay muted loop playsinline preload="auto" width="2400" height="1350"></video>
+  </div>
+  <div class="vign" aria-hidden="true"></div>
+
+  <div class="hero-in">
+    <span class="badge">⚡ Dashboard · Leads · Financeiro · <span style="color:var(--orange)">IA</span></span>
+    <h1 class="h1">Sua empresa <span class="grad">no controle total</span></h1>
+    <p class="hero-sub">Você fecha o mês sem saber se lucrou, o lead esfria no WhatsApp enquanto ninguém responde, e o preço que você cobra vira chute. Aqui, leads, financeiro e produtividade da equipe entram <b>num painel só</b>, em tempo real — pra você decidir com número, não com medo.</p>
+    <div class="cta-row">
+      <a class="cta-main" href="https://wa.me/5585992328407?text=Oi%20Emyle!%20Quero%20meu%20diagn%C3%B3stico%20gr%C3%A1tis">Quero meu diagnóstico grátis <span>↗</span></a>
+      <a class="cta-sec" href="#servicos"><i>⊙</i> Ver os sistemas</a>
+    </div>
+  </div>
+
+  <a class="scroll-hint" href="#servicos" aria-label="Rolar para ver os sistemas">
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 1l6 7 6-7" stroke="#3ee8a8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    SCROLL TO EXPLORE
+  </a>
+
+  <div class="hero-bar">
+    <div class="hb-in">
+      <span class="hb-live"><i></i> Diagnóstico grátis</span>
+      <div class="hb-metrics" aria-hidden="true">
+        <span class="hb-chip">
+          <span class="lbl"><b>Leads no mês</b><em>1.240</em></span>
+          <svg class="spark" viewBox="0 0 40 16" fill="none"><polyline points="1,13 9,10 17,11 25,6 33,4 39,2" style="stroke:var(--mint)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <i class="trend">+18%</i>
+        </span>
+        <span class="hb-chip">
+          <span class="lbl"><b>Faturamento</b><em>R$ 45k</em></span>
+          <svg class="spark" viewBox="0 0 40 16" fill="none"><polyline points="1,12 9,13 17,8 25,9 33,4 39,3" style="stroke:var(--gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <i class="trend gold">+38%</i>
+        </span>
+        <span class="hb-chip">
+          <span class="lbl"><b>Tempo/semana</b><em>12h</em></span>
+          <svg class="spark" viewBox="0 0 40 16" fill="none"><polyline points="1,4 9,6 17,5 25,9 33,11 39,13" style="stroke:var(--mint)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <i class="trend">economizadas</i>
+        </span>
+      </div>
+      <span class="hb-arrow">→</span>
+      <div class="hb-social">
+        <a href="https://www.instagram.com/emyleandrade.conversao" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="#f2f8f4"><path d="M12 2c2.7 0 3 .01 4.1.06 1.1.05 1.8.22 2.5.47.7.26 1.2.6 1.8 1.2.6.6.9 1.1 1.2 1.8.25.7.42 1.4.47 2.5.05 1.1.06 1.4.06 4.1s-.01 3-.06 4.1c-.05 1.1-.22 1.8-.47 2.5-.26.7-.6 1.2-1.2 1.8-.6.6-1.1.9-1.8 1.2-.7.25-1.4.42-2.5.47-1.1.05-1.4.06-4.1.06s-3-.01-4.1-.06c-1.1-.05-1.8-.22-2.5-.47-.7-.26-1.2-.6-1.8-1.2-.6-.6-.9-1.1-1.2-1.8-.25-.7-.42-1.4-.47-2.5C2 15 2 14.7 2 12s.01-3 .06-4.1c.05-1.1.22-1.8.47-2.5.26-.7.6-1.2 1.2-1.8.6-.6 1.1-.9 1.8-1.2.7-.25 1.4-.42 2.5-.47C9 2 9.3 2 12 2Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4Z"/></svg></a>
+        <a href="https://wa.me/5585992328407" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#f2f8f4"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.5-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.4Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- textura de fundo (inspirada na Figura 01) — aplicada em tudo MENOS o hero -->
+<div class="page-fx">
+<div class="deep-zone">
+<!-- ============ DORES ============ -->
+<section class="dores" id="dores">
+  <div class="scan-line" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// A verdade que ninguém te fala</span>
+      <h2>Por que sua empresa<br><span class="grad">ainda não vende como deveria?</span></h2>
+      <p>Não é falta de esforço. É um destes 4 furos silenciosos no seu negócio — veja se algum dói.</p>
+    </div>
+
+    <div class="dor-grid">
+      <article class="dor-card" style="--glow:#3ee8a8;--glow-2:#0e6b4f">
+        <span class="dc-n">01</span>
+        <div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+        <h3>Você não sabe se está lucrando de verdade</h3>
+        <p>Fatura, paga fornecedor, paga equipe — e chega no dia 30 sem saber se sobrou R$500 ou R$15 mil. Sem esse número, todo preço que você cobra é um chute, e todo investimento é uma aposta.</p>
+      </article>
+      <article class="dor-card" style="--glow:#d97757;--glow-2:#7a3d05">
+        <span class="dc-n">02</span>
+        <div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-4-1L3 20l1.2-4A8.5 8.5 0 1 1 21 11.5Z"/><path d="M9 10h.01M12.5 10h.01M16 10h.01" stroke-width="2.4"/></svg></div>
+        <h3>Lead chega e se perde no WhatsApp</h3>
+        <p>De cada 10 leads que chegam no seu WhatsApp, quantos você diria agora, sem olhar, em que etapa estão? Sem funil, contato vira conversa solta — e o cliente que ia fechar essa semana esfria enquanto ninguém responde.</p>
+      </article>
+      <article class="dor-card" style="--glow:#8ff5cd;--glow-2:#12b981">
+        <span class="dc-n">03</span>
+        <div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 20v-2a4 4 0 0 0-3-3.87M15.5 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Você depende de indicação pra vender</h3>
+        <p>Esse mês veio indicação e fechou bem. Mês que vem, ninguém indicou nada — e o faturamento despenca sem aviso. Sem canal previsível de cliente novo, você não tem negócio: tem loteria mensal.</p>
+      </article>
+      <article class="dor-card" style="--glow:#e39774;--glow-2:#6b3600">
+        <span class="dc-n">04</span>
+        <div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <h3>Sua operação rouba seu tempo de vender</h3>
+        <p>Toda hora gasta copiando planilha ou refazendo relatório é uma hora que não foi gasta vendendo. A IA já faz metade dessa tarefa hoje — sozinha, sem folha de pagamento extra.</p>
+      </article>
+    </div>
+
+    <div class="dor-cta">
+      <a class="cta-main" href="https://wa.me/5585992328407?text=Oi%20Emyle!%20Me%20identifiquei%20com%20as%20dores%20do%20site">Me identifiquei — quero resolver <span>↓</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SISTEMAS — convergência Duotone Neon ============ -->
+<section class="sistemas" id="servicos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// Como tudo se conecta</span>
+      <h2>Seis sistemas.<br><span class="grad">Um dashboard só.</span></h2>
+      <p>Cada sistema alimenta o mesmo painel central. Você para de pular entre ferramenta solta, planilha e grupo de WhatsApp só pra saber se o próprio negócio foi bem essa semana.</p>
+    </div>
+
+    <div class="converge">
+      <svg class="conv-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <!-- traçados de raio (bolts irregulares) do hub central pra cada card -->
+        <defs>
+          <path id="lt1" d="M22 14 C 36 14, 45 28, 50 50"/>
+          <path id="lt2" d="M22 50 C 34 50, 42 50, 50 50"/>
+          <path id="lt3" d="M22 86 C 36 86, 45 72, 50 50"/>
+          <path id="rt1" d="M78 14 C 64 14, 55 28, 50 50"/>
+          <path id="rt2" d="M78 50 C 66 50, 58 50, 50 50"/>
+          <path id="rt3" d="M78 86 C 64 86, 55 72, 50 50"/>
+        </defs>
+        <!-- raio base (glow + flicker) -->
+        <use href="#lt1" class="wire cy"/><use href="#lt2" class="wire cy d2"/><use href="#lt3" class="wire cy d3"/>
+        <use href="#rt1" class="wire or"/><use href="#rt2" class="wire or d2"/><use href="#rt3" class="wire or d3"/>
+        <!-- faísca viajando -->
+        <use href="#lt1" class="pulse cy r1"/><use href="#lt1" class="pulse cy r2"/>
+        <use href="#lt2" class="pulse cy r1"/>
+        <use href="#lt3" class="pulse cy r1"/><use href="#lt3" class="pulse cy r2"/>
+        <use href="#rt1" class="pulse or r1"/><use href="#rt1" class="pulse or r2"/>
+        <use href="#rt2" class="pulse or r1"/>
+        <use href="#rt3" class="pulse or r1"/><use href="#rt3" class="pulse or r2"/>
+        <!-- nós de solda -->
+        <circle class="ccy" cx="22" cy="14"/><circle class="ccy" cx="22" cy="50"/><circle class="ccy" cx="22" cy="86"/>
+        <circle class="cor" cx="78" cy="14"/><circle class="cor" cx="78" cy="50"/><circle class="cor" cx="78" cy="86"/>
+      </svg>
+
+      <div class="conv-col left">
+        <article class="conv-card cy">
+          <span class="cic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18"/><path d="M7 14h6"/><path d="M7 17h10"/></svg></span>
+          <h3>Landing Page de Alta Performance</h3>
+          <p>Transforma clique em conversa no seu WhatsApp, carregando em menos de 2s.</p>
+        </article>
+        <article class="conv-card cy">
+          <span class="cic"><svg viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span>
+          <h3>Google Ads</h3>
+          <p>Tráfego pago que já chega pronto pra comprar — não curioso gastando seu orçamento à toa.</p>
+        </article>
+        <article class="conv-card cy">
+          <span class="cic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 9.06 9.06 0 0 1-4-.9L3 21l1.9-4.5A8.38 8.38 0 0 1 4 12a8.5 8.5 0 0 1 17-.5Z"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/></svg></span>
+          <h3>IA no Atendimento</h3>
+          <p>Responde e qualifica lead mesmo de madrugada, sem você online.</p>
+        </article>
+      </div>
+
+      <div class="conv-center">
+        <div class="hub-glow" aria-hidden="true"></div>
+        <div class="hub-rings" aria-hidden="true"></div>
+        <div class="hub-card">
+          <div class="hub-badge">
+            <svg class="hub-hex" viewBox="0 0 100 100" aria-hidden="true">
+              <defs>
+                <linearGradient id="hexGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#2dd9f5"/><stop offset="1" stop-color="#d97757"/>
+                </linearGradient>
+              </defs>
+              <polygon points="50,4 93,27 93,73 50,96 7,73 7,27" fill="rgba(62,232,168,.14)" stroke="url(#hexGrad)" stroke-width="3"/>
+            </svg>
+            <span class="hub-ia">IA</span>
+          </div>
+          <h3>Dashboard Central</h3>
+          <p>Leads, financeiro, produtividade e resultado — tudo em tempo real, num lugar só.</p>
+        </div>
+      </div>
+
+      <div class="conv-col right">
+        <article class="conv-card or">
+          <span class="cic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M9 3v18"/><path d="M13 8h4"/><path d="M13 12h4"/><path d="M13 16h4"/></svg></span>
+          <h3>Sistema Personalizado</h3>
+          <p>Gestão do seu jeito, não do jeito que o software genérico manda — acessível do celular, onde você realmente trabalha.</p>
+        </article>
+        <article class="conv-card or">
+          <span class="cic"><svg viewBox="0 0 24 24"><path d="M3 5h18"/><path d="M6 5l4 6v5l4 2v-7l4-6"/></svg></span>
+          <h3>CRM + Atração de Leads</h3>
+          <p>Funil visual — cada lead com etapa, dono e prazo. Ninguém mais esquecido na conversa.</p>
+        </article>
+        <article class="conv-card or">
+          <span class="cic"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.2"/><circle cx="18" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M8 6h8"/><path d="M6.7 8l4 8"/><path d="M17.3 8l-4 8"/></svg></span>
+          <h3>APIs de Inteligência</h3>
+          <p>Conecta os sistemas que você já usa e tira de você a tarefa repetitiva que hoje consome horas por semana.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULTADOS — bento de widgets ============ -->
+<section class="result" id="resultados">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// O que você passa a enxergar</span>
+      <h2>Chega de operar<br><span class="grad">no escuro.</span></h2>
+      <p>Um dashboard que responde as perguntas que hoje você não sabe responder: quantos leads chegaram, de onde vieram, quanto entrou e o que a equipe produziu.</p>
+      <span class="res-tag">📊 Prévia do tipo de painel que você recebe · números ilustrativos</span>
+    </div>
+
+    <div class="bento">
+      <!-- anel de produtividade -->
+      <div class="w w-2r gr">
+        <div class="wlabel"><span>Produtividade da equipe</span><span style="display:flex;gap:.4rem;align-items:center"><span class="stat-pill ok"><i></i>Ideal</span><span class="ex">exemplo</span></span></div>
+        <div class="ring-wrap">
+          <div class="ring">
+            <svg width="82" height="82" viewBox="0 0 82 82">
+              <circle class="track" cx="41" cy="41" r="35" fill="none" stroke-width="7"/>
+              <circle class="val" cx="41" cy="41" r="35" fill="none" stroke="#3ee8a8" stroke-width="7" style="color:#3ee8a8"/>
+            </svg>
+            <div class="pct" style="color:var(--mint)">70%</div>
+          </div>
+          <div class="rt"><b>Tarefas concluídas</b>no prazo esta semana, sem cobrança manual</div>
+        </div>
+        <div class="chart" style="margin-top:1.4rem">
+          <svg viewBox="0 0 220 60" preserveAspectRatio="none">
+            <polyline points="0,48 30,44 55,46 85,36 115,38 150,26 185,22 220,14" fill="none" stroke="#3ee8a8" stroke-width="2.4" stroke-linecap="round" style="filter:drop-shadow(0 0 5px rgba(62,232,168,.6))"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- número: leads no mês -->
+      <div class="w w-num cy">
+        <div class="wlabel"><span>Leads no mês</span><span style="display:flex;gap:.4rem;align-items:center;flex-wrap:wrap"><span class="stat-pill info"><i></i>Vivo</span><span class="ex">exemplo</span></span></div>
+        <div class="big">1.240</div>
+        <small>contatos capturados</small>
+        <span class="trend">▲ organizados por origem</span>
+      </div>
+
+      <!-- número: faturamento -->
+      <div class="w w-num or">
+        <div class="wlabel">Faturamento <span class="ex">exemplo</span></div>
+        <div class="big">+38%</div>
+        <small>vs. mês anterior</small>
+        <span class="trend" style="color:#f3cdba">▲ visível em tempo real</span>
+      </div>
+
+      <!-- donut: leads por origem -->
+      <div class="w w-2">
+        <div class="wlabel">Leads por origem <span class="ex">exemplo</span></div>
+        <div class="donut-wrap">
+          <div class="donut">
+            <svg width="96" height="96" viewBox="0 0 96 96">
+              <circle cx="48" cy="48" r="38" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="11"/>
+              <circle cx="48" cy="48" r="38" fill="none" stroke="#2dd9f5" stroke-width="11" stroke-dasharray="107 239" stroke-dashoffset="0" style="filter:drop-shadow(0 0 4px #2dd9f5)"/>
+              <circle cx="48" cy="48" r="38" fill="none" stroke="#3ee8a8" stroke-width="11" stroke-dasharray="72 239" stroke-dashoffset="-107" style="filter:drop-shadow(0 0 4px #3ee8a8)"/>
+              <circle cx="48" cy="48" r="38" fill="none" stroke="#d97757" stroke-width="11" stroke-dasharray="60 239" stroke-dashoffset="-179" style="filter:drop-shadow(0 0 4px #d97757)"/>
+            </svg>
+            <div class="center"><b>100%</b><span>rastreado</span></div>
+          </div>
+          <div class="legend">
+            <div><i style="background:#2dd9f5"></i>Google Ads <b>45%</b></div>
+            <div><i style="background:#3ee8a8"></i>Instagram <b>30%</b></div>
+            <div><i style="background:#d97757"></i>Indicação <b>25%</b></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- gráfico financeiro (linha subindo) -->
+      <div class="w w-2 or">
+        <div class="wlabel">Entradas x saídas <span class="ex">exemplo</span></div>
+        <div class="w-big-num">R$ 48.200</div>
+        <div class="chart">
+          <svg viewBox="0 0 300 70" preserveAspectRatio="none">
+            <defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(217,119,87,.28)"/><stop offset="1" stop-color="rgba(217,119,87,0)"/></linearGradient></defs>
+            <path class="area" d="M0 58 C30 54,48 42,72 44 S130 30,160 22 S230 14,300 8 V70 H0 Z"/>
+            <path class="lineP" d="M0 58 C30 54,48 42,72 44 S130 30,160 22 S230 14,300 8"/>
+            <circle class="dot" cx="300" cy="8" r="3.5"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- mini-funil -->
+      <div class="w w-2">
+        <div class="wlabel">Funil de conversão <span class="ex">exemplo</span></div>
+        <div class="funnel">
+          <div class="frow"><div class="fbar" style="width:100%;background:linear-gradient(90deg,#2dd9f5,#7fe9fb)">Visitou</div><b>3.400</b></div>
+          <div class="frow"><div class="fbar" style="width:72%;background:linear-gradient(90deg,#3ee8a8,#8ff5cd)">Conversou</div><b>1.240</b></div>
+          <div class="frow"><div class="fbar" style="width:44%;background:linear-gradient(90deg,#df8f66,#f3cdba)">Fechou</div><b>380</b></div>
+        </div>
+      </div>
+
+      <!-- número: tempo economizado -->
+      <div class="w w-num gr">
+        <div class="wlabel">Tempo economizado <span class="ex">exemplo</span></div>
+        <div class="big">12h</div>
+        <small>por semana, com a IA</small>
+        <span class="trend">▲ menos tarefa repetitiva</span>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- /deep-zone -->
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="processo" id="processo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// Como funciona</span>
+      <h2>Do problema ao painel,<br><span class="grad">em 4 passos.</span></h2>
+      <p>Você não precisa entender de tecnologia. Eu conduzo cada etapa — você só acompanha os números melhorando.</p>
+    </div>
+
+    <div class="proc-wrap">
+      <div class="proc-line" aria-hidden="true"></div>
+      <div class="proc-step">
+        <div class="proc-node">1</div>
+        <div class="proc-body">
+          <h3>Diagnóstico do seu negócio</h3>
+          <p>A gente conversa no WhatsApp. Eu entendo onde o dinheiro vaza, onde o lead se perde e o que dá pra automatizar — sem custo e sem compromisso.</p>
+          <span class="free">Gratuito</span>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-node">2</div>
+        <div class="proc-body">
+          <h3>Projeto sob medida</h3>
+          <p>Desenho o sistema pro seu caso: landing page, CRM, automação, dashboard — só o que faz sentido pra você. Você aprova antes de eu construir.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-node">3</div>
+        <div class="proc-body">
+          <h3>Construção e no ar</h3>
+          <p>Coloco tudo no ar, conecto seu WhatsApp e as ferramentas que você já usa, e testo cada detalhe antes de entregar na sua mão.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-node">4</div>
+        <div class="proc-body">
+          <h3>Acompanhamento com dado</h3>
+          <p>Depois da entrega, ajusto com base nos números reais. Você passa a acompanhar leads, financeiro e resultado sempre atualizados — nunca mais no escuro.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJETOS ============ -->
+<section class="projetos" id="projetos">
+  <div class="wrap">
+    <div class="proj-head">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// Trabalhos recentes</span>
+        <h2>Projetos que já<br><span class="grad">estão no ar.</span></h2>
+        <p>Cada negócio, um sistema com a cara dele — da landing page que captura ao painel que controla a operação.</p>
+      </div>
+      <span class="proj-hint" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        Arraste para o lado
+      </span>
+    </div>
+
+    <div class="proj-rail">
+      <article class="proj-card">
+        <div class="proj-thumb"><img src="SISTEMA EMPRESAS.jpg" alt="Sistema Premier Ops — painel executivo com performance de vendas e análise de mercado" loading="lazy" style="object-position:center 40%" />
+          <span class="proj-live">No ar</span>
+        </div>
+        <div class="proj-meta"><h3>Premier Ops</h3><span class="proj-tag">Sistema · Logística</span></div>
+      </article>
+      <article class="proj-card">
+        <div class="proj-thumb"><img src="SISTEMA FINANCEIRO.jpg" alt="Painel de controle financeiro com fluxo de caixa, contas a pagar e receber" loading="lazy" style="object-position:center 22%" /></div>
+        <div class="proj-meta"><h3>Controle Financeiro</h3><span class="proj-tag">Sistema · Financeiro</span></div>
+      </article>
+      <article class="proj-card">
+        <div class="proj-thumb"><img src="SISTEMA FROTA.jpg" alt="Painel de gestão de frota com KM rodados, manutenção e desempenho" loading="lazy" style="object-position:center 20%" /></div>
+        <div class="proj-meta"><h3>Gestão de Frota</h3><span class="proj-tag">Sistema · Frota</span></div>
+      </article>
+      <article class="proj-card">
+        <div class="proj-thumb"><img src="SISTEMA.jpg" alt="Painel de automação de fluxos conectando e-mail, tarefas e relatórios" loading="lazy" style="object-position:center 48%" /></div>
+        <div class="proj-meta"><h3>Automação de Fluxos</h3><span class="proj-tag">Sistema · Automação</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUEM FAZ ============ -->
+<section class="sobre" id="quemfaz">
+  <div class="wrap">
+    <div class="sobre-grid">
+      <div class="sobre-photo">
+        <img src="about-photo.webp" alt="Emyle Andrade no escritório, ao lado de telas com os sistemas que ela desenvolve" loading="lazy" width="768" height="1024" />
+        <div class="sobre-badge"><span class="dot"></span><span>Emyle Andrade · Fortaleza-CE</span></div>
+      </div>
+      <div class="sobre-txt">
+        <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// Quem constrói</span>
+        <h2>Eu não faço site.<br><span class="grad">Construo sistemas que vendem.</span></h2>
+        <p>Muita gente entrega uma página bonita e some. Eu entro pra resolver o que trava o seu negócio: <b>lead que se perde, dinheiro sem controle e tempo gasto em tarefa que a IA já faz</b>.</p>
+        <p>Landing page, CRM, automação, dashboard — cada peça conectada num painel só, feito pro seu jeito de trabalhar. Você para de operar no escuro e passa a decidir com número.</p>
+        <div class="sobre-cta">
+          <a class="cta-main" href="https://wa.me/5585992328407?text=Oi%20Emyle!%20Quero%20conversar%20sobre%20um%20sistema%20pro%20meu%20neg%C3%B3cio">Conversar comigo <span>↗</span></a>
+          <a class="cta-sec" href="https://www.instagram.com/emyleandrade.conversao" target="_blank" rel="noopener"><i>@</i> Ver meu Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final" id="contato">
+  <div class="wrap">
+    <div class="cta-visual">
+      <img src="cta.png" alt="Painel de IA mostrando leads, financeiro, ROI e vendas em tempo real com sugestão automática" loading="lazy" width="2816" height="1536" />
+    </div>
+    <div class="cta-box">
+      <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// Bora começar</span>
+      <h2>Sua empresa merece<br><span class="grad">sair do escuro.</span></h2>
+      <p>Me chama no WhatsApp. A gente faz o diagnóstico do seu negócio e eu te mostro <b>exatamente o que dá pra organizar, automatizar e medir</b>, sem custo pra começar.</p>
+      <div class="cta-row">
+        <a class="cta-main" href="https://wa.me/5585992328407?text=Oi%20Emyle!%20Quero%20fazer%20o%20diagn%C3%B3stico%20do%20meu%20neg%C3%B3cio">Fazer meu diagnóstico <span>↗</span></a>
+      </div>
+      <p class="cta-final-note">Resposta no mesmo dia · Fortaleza-CE e todo o Brasil</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="c360-logo-crop"><img src="logo-comando360.png" alt="Comando 360"></span>
+        <p>Sistemas que vendem: landing pages, CRM, automação e dashboards pra empresa que quer sair do escuro e crescer com dado de verdade.</p>
+      </div>
+      <div class="foot-nav">
+        <div class="foot-col">
+          <h4>Navegação</h4>
+          <a href="#servicos">Sistemas</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#quemfaz">Quem faz</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contato</h4>
+          <a href="https://wa.me/5585992328407">WhatsApp</a>
+          <a href="https://www.instagram.com/emyleandrade.conversao" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div class="foot-col">
+          <h4>Endereço</h4>
+          <span class="foot-addr">Rua Manuel de Lima Valente, 113 · Sala 02<br>Bairro Jardim das Oliveiras · Fortaleza-CE</span>
+          <a href="tel:+5585992328407">(85) 9 9232-8407</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Comando 360 · Fortaleza-CE</span>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/emyleandrade.conversao" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3 .01 4.1.06 1.1.05 1.8.22 2.5.47.7.26 1.2.6 1.8 1.2.6.6.9 1.1 1.2 1.8.25.7.42 1.4.47 2.5.05 1.1.06 1.4.06 4.1s-.01 3-.06 4.1c-.05 1.1-.22 1.8-.47 2.5-.26.7-.6 1.2-1.2 1.8-.6.6-1.1.9-1.8 1.2-.7.25-1.4.42-2.5.47-1.1.05-1.4.06-4.1.06s-3-.01-4.1-.06c-1.1-.05-1.8-.22-2.5-.47-.7-.26-1.2-.6-1.8-1.2-.6-.6-.9-1.1-1.2-1.8-.25-.7-.42-1.4-.47-2.5C2 15 2 14.7 2 12s.01-3 .06-4.1c.05-1.1.22-1.8.47-2.5.26-.7.6-1.2 1.2-1.8.6-.6 1.1-.9 1.8-1.2.7-.25 1.4-.42 2.5-.47C9 2 9.3 2 12 2Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4Z"/></svg></a>
+        <a href="https://wa.me/5585992328407" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.5-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.4Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div><!-- /page-fx -->
+
+</body>
+</html>
