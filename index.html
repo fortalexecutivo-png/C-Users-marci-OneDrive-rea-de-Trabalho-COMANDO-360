@@ -554,6 +554,8 @@ a{color:inherit;text-decoration:none}
 @media(max-width:980px){.dor-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){.dor-grid{grid-template-columns:1fr;gap:1.1rem}.dor-card{min-height:0}}
 .dor-cta{margin-top:2.6rem;text-align:center}
+.dad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.8rem}
+@media(max-width:900px){.dad-grid{grid-template-columns:1fr}}
 
 /* ============================================================
    COMO FUNCIONA — timeline vertical com nós conectados
@@ -656,6 +658,11 @@ a{color:inherit;text-decoration:none}
 .cta-box p b{color:var(--ink)}
 .cta-box .cta-row{display:flex;justify-content:center;flex-wrap:wrap;gap:1rem}
 .cta-final-note{margin-top:1.5rem;font-size:.82rem;color:var(--dim)}
+.guarantee{display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1.6rem;padding:.7rem 1.1rem;
+  border-radius:12px;border:1px solid var(--line-m);background:rgba(62,232,168,.06);
+  font-size:.86rem;color:var(--mut)}
+.guarantee svg{flex:0 0 20px;color:var(--mint-2)}
+.guarantee b{color:var(--ink)}
 @media(max-width:560px){.cta-box{padding:2.6rem 1.5rem}}
 
 /* ============================================================
@@ -1034,6 +1041,37 @@ a{color:inherit;text-decoration:none}
 </section>
 </div><!-- /deep-zone -->
 
+<!-- ============ DIA A DIA ============ -->
+<section class="dores" id="diaadia" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// Como é usar, de verdade</span>
+      <h2>Não é mais um sistema<br><span class="grad">pra sua equipe esquecer.</span></h2>
+      <p>Sem formulário complicado, sem treinamento de uma semana. É assim que muda o seu dia:</p>
+    </div>
+    <div class="dad-grid">
+      <article class="dor-card" style="--glow:#3ee8a8;--glow-2:#0e6b4f">
+        <span class="dc-n">01</span>
+        <div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 9.06 9.06 0 0 1-4-.9L3 21l1.9-4.5A8.38 8.38 0 0 1 4 12a8.5 8.5 0 0 1 17-.5Z"/></svg></div>
+        <h3>Lead chega pelo WhatsApp</h3>
+        <p>Cai direto no funil do CRM, já com origem e vendedora responsável marcados — sem copiar e colar em planilha.</p>
+      </article>
+      <article class="dor-card" style="--glow:#d97757;--glow-2:#7a3d05">
+        <span class="dc-n">02</span>
+        <div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5.5c0-1.9-2.2-3.5-5-3.5S7 3.6 7 5.5 9.2 9 12 9s5 1.6 5 3.5-2.2 3.5-5 3.5-5-1.6-5-3.5"/></svg></div>
+        <h3>Financeiro se atualiza sozinho</h3>
+        <p>Conta paga ou recebida entra no fluxo de caixa e no DRE na hora — sem esperar o fechamento do mês pra saber se sobrou.</p>
+      </article>
+      <article class="dor-card" style="--glow:#8ff5cd;--glow-2:#12b981">
+        <span class="dc-n">03</span>
+        <div class="dc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+        <h3>Você abre o painel, não o Excel</h3>
+        <p>Vê tudo em tempo real, do celular, onde estiver — sem pedir pra ninguém montar relatório.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ============ COMO FUNCIONA ============ -->
 <section class="processo" id="processo">
   <div class="wrap">
@@ -1196,6 +1234,10 @@ a{color:inherit;text-decoration:none}
       <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// Bora começar</span>
       <h2>Sua empresa merece<br><span class="grad">sair do escuro.</span></h2>
       <p>Me chama no WhatsApp. A gente faz o diagnóstico do seu negócio e eu te mostro <b>exatamente o que dá pra organizar, automatizar e medir</b>, sem custo pra começar.</p>
+      <div class="guarantee">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.4 8 11 4.6-2.6 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span><b>Garantia de ajuste sem custo:</b> se em 30 dias o painel não estiver do jeito combinado, a gente ajusta até funcionar certo pra você.</span>
+      </div>
       <div class="cta-row">
         <a class="cta-main" href="https://wa.me/5585992328407?text=Ol%C3%A1!%20Quero%20meu%20diagn%C3%B3stico%20gr%C3%A1tis%20(Comando%20360)">Quero meu diagnóstico grátis <span>↗</span></a>
       </div>
