@@ -3,29 +3,28 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Emyle Andrade — Sua empresa no controle total</title>
-<meta name="description" content="Dashboard com leads, financeiro e métricas em tempo real, landing pages de alta performance, IA no atendimento e sistemas sob medida para sua empresa." />
-<link rel="canonical" href="https://emyleandrade.com.br/" />
+<title>Comando 360 — Sua empresa no controle total</title>
+<meta name="description" content="O Comando 360 cria o sistema completo da sua empresa: CRM, financeiro e operação num painel só, em tempo real. Diagnóstico grátis. Fortaleza-CE e todo o Brasil." />
+<link rel="canonical" href="https://comando360.vercel.app/" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://emyleandrade.com.br/" />
-<meta property="og:title" content="Emyle Andrade · Sua empresa no controle total" />
-<meta property="og:description" content="Leads, financeiro e produtividade num painel só, em tempo real. A IA cuida do atendimento e a página vende por você." />
-<meta property="og:image" content="https://emyleandrade.com.br/og-image.jpg" />
+<meta property="og:site_name" content="Comando 360" />
+<meta property="og:url" content="https://comando360.vercel.app/" />
+<meta property="og:title" content="Comando 360 · Sua empresa no controle total" />
+<meta property="og:description" content="CRM, financeiro e operação num painel só, em tempo real. Sistemas sob medida testados em empresas reais. Diagnóstico grátis." />
+<meta property="og:image" content="https://comando360.vercel.app/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:alt" content="Painel de controle da empresa com leads, financeiro e IA em tempo real" />
 <meta property="og:locale" content="pt_BR" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Emyle Andrade · Sua empresa no controle total" />
-<meta name="twitter:description" content="Leads, financeiro e produtividade num painel só, em tempo real. A IA cuida do atendimento e a página vende por você." />
-<meta name="twitter:image" content="https://emyleandrade.com.br/og-image.jpg" />
+<meta name="twitter:title" content="Comando 360 · Sua empresa no controle total" />
+<meta name="twitter:description" content="CRM, financeiro e operação num painel só, em tempo real. Sistemas sob medida testados em empresas reais. Diagnóstico grátis." />
+<meta name="twitter:image" content="https://comando360.vercel.app/og-image.jpg" />
 <link rel="icon" type="image/png" href="/logo.png" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="video" href="/hailuo-2_3_quero_uma_animação_ela_abri_os_olhos_e_olha_para_um_lado_e_para_outro_lentamen-0.mp4" type="video/mp4" fetchpriority="high" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="preload" as="font" href="fonts/inter-latin-var.woff2" type="font/woff2" crossorigin />
+<link rel="preload" as="image" href="hero-ia.webp" fetchpriority="high" />
 
 <style>
 /* ============================================================
@@ -149,6 +148,8 @@ a{color:inherit;text-decoration:none}
   border:1px solid var(--line-m);border-radius:999px;padding:.5rem 1.05rem;
   background:rgba(62,232,168,.07)}
 
+@font-face{font-family:'Inter';src:url('fonts/inter-latin-var.woff2') format('woff2');
+  font-weight:100 900;font-style:normal;font-display:swap}
 @font-face{font-family:'Nasalization';src:url('fonts/nasalization.woff2') format('woff2');
   font-weight:400;font-style:normal;font-display:swap}
 
@@ -419,27 +420,23 @@ a{color:inherit;text-decoration:none}
      da barra e desvanece pro fundo da página, eliminando o degrau reto de cor */
   background:linear-gradient(to bottom,rgba(4,10,7,.9) 0,rgba(4,10,7,0) 72px)}
 /* ============================================================
-   TEXTURA DE FUNDO (inspirada na Figura 01) — traços de circuito
-   descendo + nós com glow teal/dourado + bokeh suave. Presença
-   sutil atrás de texto/cards; aplicada em .page-fx (tudo menos o hero).
+   TEXTURA DE FUNDO — painel de dashboard flutuando (grade + linhas
+   de tendência teal/cobre + métricas de leads/conversão/faturamento).
+   Fixa na viewport (não rola com a página — sensação de camada
+   flutuando atrás do conteúdo). Bem apagada, não compete com o texto.
    ============================================================ */
 .page-fx{position:relative;z-index:0}
 .page-fx>*{position:relative;z-index:1}
 .page-fx::before{
   content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-  /* traços de circuito suaves (linhas finas + anéis pequenos) + bokeh discreto */
-  background-image:
-    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22340%22%20height%3D%22340%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%233ee8a8%22%20stroke-width%3D%221%22%3E%3Cpath%20d%3D%22M52%200%20V88%20H118%20V170%22%20opacity%3D%22.13%22%2F%3E%3Cpath%20d%3D%22M215%200%20V50%20H170%20V124%22%20opacity%3D%22.11%22%2F%3E%3Cpath%20d%3D%22M283%200%20V190%22%20opacity%3D%22.10%22%2F%3E%3Cpath%20d%3D%22M20%20238%20H104%20V340%22%20opacity%3D%22.11%22%2F%3E%3Cpath%20d%3D%22M340%20108%20H242%20V272%22%20opacity%3D%22.095%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%221.2%22%3E%3Ccircle%20cx%3D%22118%22%20cy%3D%22170%22%20r%3D%224.5%22%20stroke%3D%22%233ee8a8%22%20opacity%3D%22.4%22%2F%3E%3Ccircle%20cx%3D%22170%22%20cy%3D%22124%22%20r%3D%224.5%22%20stroke%3D%22%23d97757%22%20opacity%3D%22.34%22%2F%3E%3Ccircle%20cx%3D%22283%22%20cy%3D%22190%22%20r%3D%224.5%22%20stroke%3D%22%233ee8a8%22%20opacity%3D%22.34%22%2F%3E%3Ccircle%20cx%3D%22104%22%20cy%3D%22238%22%20r%3D%223.5%22%20stroke%3D%22%233ee8a8%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22242%22%20cy%3D%22272%22%20r%3D%224%22%20stroke%3D%22%23d97757%22%20opacity%3D%22.28%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
-    radial-gradient(circle 150px at 13% 5%,rgba(62,232,168,.045),transparent 70%),
-    radial-gradient(circle 120px at 88% 38%,rgba(217,119,87,.03),transparent 70%),
-    radial-gradient(circle 160px at 32% 76%,rgba(62,232,168,.035),transparent 72%);
-  background-repeat:repeat,no-repeat,no-repeat,no-repeat;
-  background-size:340px 340px,auto,auto,auto;
-  opacity:.8;
-  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 48px);
-  mask-image:linear-gradient(to bottom,transparent 0,#000 48px);
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22520%22%20height%3D%22340%22%20viewBox%3D%220%200%20520%20340%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23e9ece9%22%20stroke-width%3D%221.3%22%3E%3Cpath%20d%3D%22M0%2060%20H120%20L150%2030%20H260%20L285%2055%20H430%22%20opacity%3D%22.22%22%2F%3E%3Cpath%20d%3D%22M0%20120%20H80%20L110%20150%20H200%20L230%20120%20H340%20L365%20145%20H520%22%20opacity%3D%22.2%22%2F%3E%3Cpath%20d%3D%22M0%20190%20H150%20L175%20165%20H300%20L330%20190%20H460%22%20opacity%3D%22.2%22%2F%3E%3Cpath%20d%3D%22M0%20250%20H100%20L130%20280%20H240%20L260%20250%20H400%20L420%20275%20H520%22%20opacity%3D%22.18%22%2F%3E%3Cpath%20d%3D%22M0%20300%20H180%20L205%20320%20H340%22%20opacity%3D%22.16%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23e9ece9%22%3E%3Ccircle%20cx%3D%22120%22%20cy%3D%2260%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%2230%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22260%22%20cy%3D%2230%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22285%22%20cy%3D%2255%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%2280%22%20cy%3D%22120%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22110%22%20cy%3D%22150%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22200%22%20cy%3D%22150%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22230%22%20cy%3D%22120%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22340%22%20cy%3D%22120%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22365%22%20cy%3D%22145%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%22190%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22175%22%20cy%3D%22165%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22165%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22330%22%20cy%3D%22190%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22250%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22130%22%20cy%3D%22280%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%22280%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22260%22%20cy%3D%22250%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22400%22%20cy%3D%22250%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22420%22%20cy%3D%22275%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22180%22%20cy%3D%22300%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3Ccircle%20cx%3D%22205%22%20cy%3D%22320%22%20r%3D%222.4%22%20opacity%3D%22.3%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23e9ece9%22%20font-family%3D%22Consolas%2CMonaco%2Cmonospace%22%20font-size%3D%2213%22%20opacity%3D%22.16%22%3E%3Ctext%20x%3D%22340%22%20y%3D%2220%22%3E01%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%2220%22%3E10%3C%2Ftext%3E%3Ctext%20x%3D%22480%22%20y%3D%2220%22%3E001%3C%2Ftext%3E%3Ctext%20x%3D%22550%22%20y%3D%2220%22%3E110%3C%2Ftext%3E%3Ctext%20x%3D%22340%22%20y%3D%2254%22%3E0101%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%2254%22%3E011%3C%2Ftext%3E%3Ctext%20x%3D%22480%22%20y%3D%2254%22%3E01%3C%2Ftext%3E%3Ctext%20x%3D%22550%22%20y%3D%2254%22%3E10%3C%2Ftext%3E%3Ctext%20x%3D%22340%22%20y%3D%2288%22%3E001%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%2288%22%3E110%3C%2Ftext%3E%3Ctext%20x%3D%22480%22%20y%3D%2288%22%3E0101%3C%2Ftext%3E%3Ctext%20x%3D%22550%22%20y%3D%2288%22%3E011%3C%2Ftext%3E%3Ctext%20x%3D%22340%22%20y%3D%22122%22%3E01%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22122%22%3E10%3C%2Ftext%3E%3Ctext%20x%3D%22480%22%20y%3D%22122%22%3E001%3C%2Ftext%3E%3Ctext%20x%3D%22550%22%20y%3D%22122%22%3E110%3C%2Ftext%3E%3Ctext%20x%3D%22340%22%20y%3D%22156%22%3E0101%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22156%22%3E011%3C%2Ftext%3E%3Ctext%20x%3D%22480%22%20y%3D%22156%22%3E01%3C%2Ftext%3E%3Ctext%20x%3D%22550%22%20y%3D%22156%22%3E10%3C%2Ftext%3E%3Ctext%20x%3D%22340%22%20y%3D%22190%22%3E001%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22190%22%3E110%3C%2Ftext%3E%3Ctext%20x%3D%22480%22%20y%3D%22190%22%3E0101%3C%2Ftext%3E%3Ctext%20x%3D%22550%22%20y%3D%22190%22%3E011%3C%2Ftext%3E%3Ctext%20x%3D%22340%22%20y%3D%22224%22%3E01%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22224%22%3E10%3C%2Ftext%3E%3Ctext%20x%3D%22480%22%20y%3D%22224%22%3E001%3C%2Ftext%3E%3Ctext%20x%3D%22550%22%20y%3D%22224%22%3E110%3C%2Ftext%3E%3Ctext%20x%3D%22340%22%20y%3D%22258%22%3E0101%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22258%22%3E011%3C%2Ftext%3E%3Ctext%20x%3D%22480%22%20y%3D%22258%22%3E01%3C%2Ftext%3E%3Ctext%20x%3D%22550%22%20y%3D%22258%22%3E10%3C%2Ftext%3E%3Ctext%20x%3D%22340%22%20y%3D%22292%22%3E001%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22292%22%3E110%3C%2Ftext%3E%3Ctext%20x%3D%22480%22%20y%3D%22292%22%3E0101%3C%2Ftext%3E%3Ctext%20x%3D%22550%22%20y%3D%22292%22%3E011%3C%2Ftext%3E%3Ctext%20x%3D%22340%22%20y%3D%22326%22%3E01%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22326%22%3E10%3C%2Ftext%3E%3Ctext%20x%3D%22480%22%20y%3D%22326%22%3E001%3C%2Ftext%3E%3Ctext%20x%3D%22550%22%20y%3D%22326%22%3E110%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat:repeat;
+  background-size:520px 340px;
+  opacity:.55;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 60px);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 60px);
 }
-@media(max-width:680px){.page-fx::before{background-size:230px 230px,auto,auto,auto}}
+@media(max-width:680px){.page-fx::before{background-size:340px 220px}}
 
 .deep-zone::before{
   content:"";display:none;position:absolute;inset:0;z-index:0;pointer-events:none;
@@ -642,7 +639,37 @@ a{color:inherit;text-decoration:none}
 .foot-social a:hover{border-color:var(--mint);background:var(--mint-soft)}
 .foot-social svg{width:16px;height:16px;fill:var(--mut)}
 .foot-social a:hover svg{fill:var(--mint-2)}
+/* ===== FAQ ===== */
+.faq{padding:5.5rem 0 4rem;position:relative}
+.faq-list{max-width:780px;margin-top:2.6rem}
+.faq-item{border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02);
+  margin-bottom:.8rem;overflow:hidden;transition:border-color .3s}
+.faq-item[open]{border-color:var(--line-m)}
+.faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;
+  align-items:center;gap:1rem;padding:1.15rem 1.35rem;font-weight:700;color:var(--ink);font-size:.98rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:1.25rem;color:var(--mint-2);flex:0 0 auto;transition:transform .3s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{padding:0 1.35rem 1.25rem;color:var(--mut);font-size:.94rem;line-height:1.65}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Comando 360",
+  "description": "Sistemas sob medida para empresas: CRM, financeiro e operação num painel só, em tempo real.",
+  "url": "https://comando360.vercel.app/",
+  "telephone": "+5585992328407",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Manuel de Lima Valente, 113 — Sala 02, Jardim das Oliveiras",
+    "addressLocality": "Fortaleza",
+    "addressRegion": "CE",
+    "addressCountry": "BR"
+  },
+  "areaServed": "BR"
+}
+</script>
 </head>
 <body>
 
@@ -665,7 +692,7 @@ a{color:inherit;text-decoration:none}
         <a href="#projetos">Projetos</a>
         <a href="#quemfaz">Quem faz</a>
       </nav>
-      <a class="nav-cta" href="https://wa.me/5585992328407?text=Oi%20Emyle!%20Quero%20organizar%20minha%20empresa%20com%20dados">Falar <span>↗</span></a>
+      <a class="nav-cta" href="https://wa.me/5585992328407?text=Ol%C3%A1!%20Quero%20meu%20diagn%C3%B3stico%20gr%C3%A1tis%20(Comando%20360)">Falar <span>↗</span></a>
     </div>
   </div>
 </header>
@@ -674,23 +701,23 @@ a{color:inherit;text-decoration:none}
 <section class="hero" id="top">
   <div class="hero-art" aria-hidden="true">
     <video src="hailuo-2_3_quero_uma_animação_ela_abri_os_olhos_e_olha_para_um_lado_e_para_outro_lentamen-0.mp4"
-      poster="hero-ia.png" autoplay muted loop playsinline preload="auto" width="2400" height="1350"></video>
+      poster="hero-ia.webp" autoplay muted loop playsinline preload="metadata" width="2400" height="1350"></video>
   </div>
   <div class="vign" aria-hidden="true"></div>
 
   <div class="hero-in">
     <span class="badge">⚡ Dashboard · Leads · Financeiro · <span style="color:var(--orange)">IA</span></span>
     <h1 class="h1">Sua empresa <span class="grad">no controle total</span></h1>
-    <p class="hero-sub">Você fecha o mês sem saber se lucrou, o lead esfria no WhatsApp enquanto ninguém responde, e o preço que você cobra vira chute. Aqui, leads, financeiro e produtividade da equipe entram <b>num painel só</b>, em tempo real — pra você decidir com número, não com medo.</p>
+    <p class="hero-sub">O <b>Comando 360</b> cria o sistema completo da sua empresa: CRM, financeiro e operação <b>num painel só</b>, em tempo real. Chega de fechar o mês sem saber se lucrou, de lead esfriando no WhatsApp e de preço decidido no chute.</p>
     <div class="cta-row">
-      <a class="cta-main" href="https://wa.me/5585992328407?text=Oi%20Emyle!%20Quero%20meu%20diagn%C3%B3stico%20gr%C3%A1tis">Quero meu diagnóstico grátis <span>↗</span></a>
+      <a class="cta-main" href="https://wa.me/5585992328407?text=Ol%C3%A1!%20Quero%20meu%20diagn%C3%B3stico%20gr%C3%A1tis%20(Comando%20360)">Quero meu diagnóstico grátis <span>↗</span></a>
       <a class="cta-sec" href="#servicos"><i>⊙</i> Ver os sistemas</a>
     </div>
   </div>
 
   <a class="scroll-hint" href="#servicos" aria-label="Rolar para ver os sistemas">
     <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 1l6 7 6-7" stroke="#3ee8a8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    SCROLL TO EXPLORE
+    ROLE PRA EXPLORAR
   </a>
 
   <div class="hero-bar">
@@ -763,7 +790,7 @@ a{color:inherit;text-decoration:none}
     </div>
 
     <div class="dor-cta">
-      <a class="cta-main" href="https://wa.me/5585992328407?text=Oi%20Emyle!%20Me%20identifiquei%20com%20as%20dores%20do%20site">Me identifiquei — quero resolver <span>↓</span></a>
+      <a class="cta-main" href="https://wa.me/5585992328407?text=Ol%C3%A1!%20Me%20identifiquei%20com%20as%20dores%20do%20site.%20Quero%20o%20diagn%C3%B3stico%20gr%C3%A1tis">Me identifiquei — quero resolver <span>↓</span></a>
     </div>
   </div>
 </section>
@@ -1059,10 +1086,10 @@ a{color:inherit;text-decoration:none}
       <div class="sobre-txt">
         <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// Quem constrói</span>
         <h2>Eu não faço site.<br><span class="grad">Construo sistemas que vendem.</span></h2>
-        <p>Muita gente entrega uma página bonita e some. Eu entro pra resolver o que trava o seu negócio: <b>lead que se perde, dinheiro sem controle e tempo gasto em tarefa que a IA já faz</b>.</p>
-        <p>Landing page, CRM, automação, dashboard — cada peça conectada num painel só, feito pro seu jeito de trabalhar. Você para de operar no escuro e passa a decidir com número.</p>
+        <p>O Comando 360 não vende software de prateleira. <b>Os mesmos sistemas desta página rodam empresas reais todos os dias</b> — transporte executivo, gestão de frota e controle financeiro — antes de chegar até você.</p>
+        <p>Landing page, CRM, automação, dashboard — cada peça conectada num painel só, feito pro seu jeito de trabalhar. Você para de operar no escuro e passa a decidir com número: <b>lead que se perdia, dinheiro sem controle e tarefa repetitiva viram coisa do passado</b>.</p>
         <div class="sobre-cta">
-          <a class="cta-main" href="https://wa.me/5585992328407?text=Oi%20Emyle!%20Quero%20conversar%20sobre%20um%20sistema%20pro%20meu%20neg%C3%B3cio">Conversar comigo <span>↗</span></a>
+          <a class="cta-main" href="https://wa.me/5585992328407?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20um%20sistema%20pro%20meu%20neg%C3%B3cio%20(Comando%20360)">Conversar comigo <span>↗</span></a>
           <a class="cta-sec" href="https://www.instagram.com/emyleandrade.conversao" target="_blank" rel="noopener"><i>@</i> Ver meu Instagram</a>
         </div>
       </div>
@@ -1071,17 +1098,53 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <!-- ============ CTA FINAL ============ -->
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// Perguntas frequentes</span>
+      <h2>O que todo mundo pergunta<br><span class="grad">antes de começar.</span></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Quanto custa?</summary>
+        <p>Depende do que a sua empresa precisa — por isso o primeiro passo é o diagnóstico grátis. Você sai dele com uma proposta fechada, sem surpresa, e aprova antes de qualquer construção começar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Em quanto tempo o sistema fica pronto?</summary>
+        <p>O prazo é definido junto com você no diagnóstico. Começamos pela peça de maior impacto no seu caixa (em geral o painel ou o CRM), então você vê resultado antes do projeto inteiro terminar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Preciso entender de tecnologia?</summary>
+        <p>Não. A gente cuida da parte técnica de ponta a ponta. Você acompanha tudo em português claro, aprova cada etapa e recebe o sistema pronto pra usar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Já uso planilhas ou outro sistema. Perco tudo?</summary>
+        <p>Não perde nada. Aproveitamos o que já funciona e migramos seus dados pro painel novo — você só para de depender de planilha solta e de informação espalhada.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Funciona no celular?</summary>
+        <p>Sim. Tudo roda no navegador, do computador e do celular, sem instalar nada — você acompanha sua empresa de onde estiver.</p>
+      </details>
+      <details class="faq-item">
+        <summary>E depois que o sistema é entregue?</summary>
+        <p>Não te deixamos na mão: acompanhamos os números reais de uso e ajustamos o sistema com base neles. É o mesmo cuidado que temos com os sistemas das nossas próprias empresas.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="cta-final" id="contato">
   <div class="wrap">
     <div class="cta-visual">
-      <img src="cta.png" alt="Painel de IA mostrando leads, financeiro, ROI e vendas em tempo real com sugestão automática" loading="lazy" width="2816" height="1536" />
+      <img src="cta.webp" alt="Painel de IA mostrando leads, financeiro, ROI e vendas em tempo real com sugestão automática" loading="lazy" width="2816" height="1536" />
     </div>
     <div class="cta-box">
       <span class="ey" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mint-2)">// Bora começar</span>
       <h2>Sua empresa merece<br><span class="grad">sair do escuro.</span></h2>
       <p>Me chama no WhatsApp. A gente faz o diagnóstico do seu negócio e eu te mostro <b>exatamente o que dá pra organizar, automatizar e medir</b>, sem custo pra começar.</p>
       <div class="cta-row">
-        <a class="cta-main" href="https://wa.me/5585992328407?text=Oi%20Emyle!%20Quero%20fazer%20o%20diagn%C3%B3stico%20do%20meu%20neg%C3%B3cio">Fazer meu diagnóstico <span>↗</span></a>
+        <a class="cta-main" href="https://wa.me/5585992328407?text=Ol%C3%A1!%20Quero%20meu%20diagn%C3%B3stico%20gr%C3%A1tis%20(Comando%20360)">Quero meu diagnóstico grátis <span>↗</span></a>
       </div>
       <p class="cta-final-note">Resposta no mesmo dia · Fortaleza-CE e todo o Brasil</p>
     </div>
@@ -1103,6 +1166,7 @@ a{color:inherit;text-decoration:none}
           <a href="#resultados">Resultados</a>
           <a href="#projetos">Projetos</a>
           <a href="#quemfaz">Quem faz</a>
+          <a href="#faq">Perguntas frequentes</a>
         </div>
         <div class="foot-col">
           <h4>Contato</h4>
